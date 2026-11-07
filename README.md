@@ -29,6 +29,7 @@ Most guides are written for **MikroTik RouterOS 7**, but the concepts (WireGuard
 | # | Guide | Platform | Topics | Summary |
 |---|---|---|---|---|
 | 1 | [**Multi-site to multi-site VPN**](multi-site-to-multi-site-VPN/README.md) | MikroTik RouterOS 7 | WireGuard · GRE · OSPF · Firewall · NAT | A hub-and-spoke VPN that connects many sites so every LAN can reach every other LAN. WireGuard provides encrypted transport through NAT, a GRE tunnel per site carries the traffic, and OSPF routes everything automatically. The guide also explains a one-armed node that is **not** its LAN's default gateway, yet everything still works. |
+| 2 | [**Multi-WAN with DHCP: load balancing, failover, QoS**](multi-WAN-load-balancing-failover-QoS/README.md) | MikroTik RouterOS 7 | DHCP WANs · PCC · Routing tables · Failover · QoS · Firewall | A dual-WAN edge router where both uplinks are DHCP (one of them double-NATed). It balances new connections across both uplinks with PCC and per-WAN routing tables, fails over by route distance, and shapes per-LAN traffic with PCQ simple queues. It also covers a self-learning blacklist firewall and three separate LANs (guest, office, POS), plus what to fix so failover detects upstream outages and QoS priorities actually take effect. |
 
 *More use cases are coming. Watch or star the repository to get notified.*
 
